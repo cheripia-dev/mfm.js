@@ -1,15 +1,16 @@
-# mfc.js
-An MFC parser implementation with TypeScript.
-[Try it out!](https://runkit.com/npm/mfc-js)
+# mfm.js
+An MFM parser implementation with TypeScript.
 
-[![Test](https://github.com/kokonect-link/mfc.js/actions/workflows/test.yml/badge.svg)](https://github.com/kokonect-link/mfc.js/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/kokonect-link/mfc.js/branch/develop/graph/badge.svg?token=irAWFiHK8T)](https://codecov.io/gh/kokonect-link/mfc.js)
+[![Test](https://github.com/cheripia-dev/mfm.js/actions/workflows/test.yml/badge.svg)](https://github.com/cheripia-dev/mfm.js/actions/workflows/test.yml)
 
-[![NPM](https://nodei.co/npm/mfc-js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mfc-js)
+This is the Cheripia fork of [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js).
+The package name is `mfm-js`, but installing `mfm-js` from npm does not install this fork.
 
 ## Installation
-```
-npm i mfc-js
+Install this fork from GitHub, replacing `<commit-sha>` with the full commit SHA to pin:
+
+```sh
+npm install 'mfm-js@git+https://github.com/cheripia-dev/mfm.js.git#<commit-sha>'
 ```
 
 ## Usage
@@ -17,7 +18,7 @@ Please see [docs](./docs/index.md) for the detail.
 
 TypeScript:
 ```ts
-import * as mfc from 'mfc-js';
+import * as mfm from 'mfm-js';
 
 const inputText =
 `<center>
@@ -28,13 +29,13 @@ I'm @ai, A bot of cherrypick!
 https://github.com/syuilo/ai
 </center>`;
 
-// Generate a MFC tree from the full MFC text.
+// Generate an MFM tree from the full MFM text.
 const mfmTree = mfm.parse(inputText);
 
-// Generate a MFC tree from the simple MFC text.
+// Generate an MFM tree from the simple MFM text.
 const simpleMfmTree = mfm.parseSimple('I like the hot soup :soup:​');
 
-// Reverse to a MFC text from the MFC tree.
+// Reverse to an MFM text from the MFM tree.
 const text = mfm.toString(mfmTree);
 
 ```
@@ -42,7 +43,7 @@ const text = mfm.toString(mfmTree);
 ## Develop
 ### 1. Clone
 ```
-git clone https://github.com/kokonect-link/mfc.js.git
+git clone https://github.com/cheripia-dev/mfm.js.git
 ```
 
 ### 2. Install packages
